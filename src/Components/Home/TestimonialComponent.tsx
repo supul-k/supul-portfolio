@@ -1,8 +1,9 @@
 import profileImage from '../../images/WhatsApp Image 2022-12-16 at 2.29.57 AM.jpg'
+import logo from '../../images/1-removebg-preview.png'
 
 export default function TestimonialComponent() {
     return (
-        <section className="relative isolate overflow-hidden bg-gray-800 px-6 py-24 sm:py-32 lg:px-8">
+        <section className="relative isolate overflow-hidden bg-black px-6 py-24 sm:py-32 lg:px-8">
            <div
                     className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
                     aria-hidden="true"
@@ -16,7 +17,7 @@ export default function TestimonialComponent() {
                     />
                 </div>
             <div className="mx-auto max-w-2xl lg:max-w-4xl">
-                <img className="mx-auto h-12" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" alt="" />
+                <img className="mx-auto h-30" src={logo} alt="" />
                 <figure className="mt-10">
                     <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
                         <p className="mb-2 text-white">
