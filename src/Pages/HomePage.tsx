@@ -1,12 +1,10 @@
 import React from 'react'
-import HeroComponent from '../Components/Home/HeroComponent'
-import TestimonialComponent from '../Components/Home/TestimonialComponent'
+import LandingPage from '../Components/Home/LandingPage'
 
 function HomePage() {
   return (
     <div>
-      <HeroComponent />
-      <TestimonialComponent />
+      <LandingPage/>
     </div>
   )
 }

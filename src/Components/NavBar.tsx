@@ -1,21 +1,39 @@
+import React , {useState} from 'react';
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useNavigate } from 'react-router-dom';
 import logo from '../images/1-removebg-preview.png'
 import profileImage from '../images/WhatsApp Image 2022-12-16 at 2.29.57 AM.jpg'
 
 const navigation = [
-    { name: 'Dashboard', href: '#', current: true },
-    { name: 'Experience', href: '#', current: false },
-    { name: 'Projects', href: '#', current: false },
-    { name: 'Resume', href: '#', current: false },
+    { name: 'Dashboard', href: '/', current: true },
+    { name: 'Experience', href: '/experience', current: false },
+    { name: 'Projects', href: '/projects', current: false },
+    { name: 'Resume', href: '/resume', current: false },
 ]
+
+type NavItem = {
+    name: string;
+    href: string;
+    current: boolean;
+  };
 
 function classNames(...classes: (string | false | null | undefined)[]): string {
     return classes.filter(Boolean).join(' ');
 }
 
 export default function NavBar() {
+    const navigate = useNavigate();
+    const [currentItem, setCurrentItem] =  useState<NavItem | null>(navigation[0]);
+
+    const handleNavigationClick = (item : NavItem) => {
+        console.log('hello');
+        
+        setCurrentItem(item);
+        navigate(item.href);
+      };
+
     return (
         <Disclosure as="nav" className="bg-gray-800">
             {({ open }) => (
@@ -46,17 +64,20 @@ export default function NavBar() {
                                 <div className="hidden sm:ml-6 sm:block">
                                     <div className="flex space-x-4">
                                         {navigation.map((item) => (
-                                            <a
+                                            <button
                                                 key={item.name}
-                                                href={item.href}
                                                 className={classNames(
-                                                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                                    item === currentItem ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                                                     'rounded-md px-3 py-2 text-sm font-medium'
                                                 )}
-                                                aria-current={item.current ? 'page' : undefined}
+                                                aria-current={item === currentItem ? 'page' : undefined}
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    handleNavigationClick(item);
+                                                  }}
                                             >
                                                 {item.name}
-                                            </a>
+                                            </button>
                                         ))}
                                     </div>
                                 </div>
