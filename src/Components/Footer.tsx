@@ -1,12 +1,12 @@
-import profileImage from '../../images/WhatsApp Image 2022-12-16 at 2.29.57 AM.jpg'
-import logo from '../../images/1-removebg-preview.png'
-import gmail from '../../images/contact/gmail.png'
-import phone from '../../images/contact/phone-call.png'
-import map from '../../images/contact/map.png'
-import facebook from '../../images/contact/facebook.png'
-import linkedin from '../../images/contact/linkedin.png'
-import instagram from '../../images/contact/instagram.png'
-import whatsapp from '../../images/contact/whatsapp.png'
+import profileImage from '../images/WhatsApp Image 2022-12-16 at 2.29.57 AM.jpg'
+import logo from '../images/1-removebg-preview.png'
+import gmail from '../images/contact/gmail.png'
+import phone from '../images/contact/phone-call.png'
+import map from '../images/contact/map.png'
+import facebook from '../images/contact/facebook.png'
+import linkedin from '../images/contact/linkedin.png'
+import instagram from '../images/contact/instagram.png'
+import whatsapp from '../images/contact/whatsapp.png'
 
 const contacts = [
     {
@@ -46,7 +46,7 @@ const socials = [
     },
 ]
 
-export default function TestimonialComponent() {
+export default function Footer() {
     return (
         <section className="relative isolate overflow-hidden bg-black px-6 py-24 sm:py-20 lg:px-8">
             <div

@@ -8,8 +8,8 @@ import profileImage from '../images/WhatsApp Image 2022-12-16 at 2.29.57 AM.jpg'
 
 const navigation = [
     { name: 'Dashboard', href: '/', current: true },
-    { name: 'Experience', href: '/experience', current: false },
     { name: 'Projects', href: '/projects', current: false },
+    { name: 'MySkills', href: '/myskills', current: false },    
     { name: 'Resume', href: '/resume', current: false },
 ]
 
