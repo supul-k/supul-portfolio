@@ -10,14 +10,17 @@ import whatsapp from '../images/contact/whatsapp.png'
 
 const contacts = [
     {
+        id: 1,
         name: 'supulkalhara7@gmail.com',
         imageUrl: gmail
     },
     {
+        id: 2,
         name: '(+94) 71 056 4090 (WhatsApp)',
         imageUrl: phone
     },
     {
+        id: 3,
         name: 'Colombo, Sri Lanka',
         imageUrl: map
     },
@@ -25,22 +28,26 @@ const contacts = [
 
 const socials = [
     {
-        name: 'supulkalhara7@gmail.com',
+        id: 1,
+        name: 'facebook',
         imageUrl: facebook,
         href: 'https://www.facebook.com/supul.kalhara'
     },
     {
-        name: '(+94) 71 056 4090 (WhatsApp)',
+        id: 2,
+        name: 'linkedin',
         imageUrl: linkedin,
         href: 'http://www.linkedin.com/in/supulkalhara'
     },
     {
-        name: 'Colombo, Sri Lanka',
+        id: 3,
+        name: 'instagram',
         imageUrl: instagram,
         href: 'https://www.instagram.com/___kalhara.supul___/'
     },
     {
-        name: 'Colombo, Sri Lanka',
+        id: 4,
+        name: 'whatsapp',
         imageUrl: whatsapp,
         href: 'https://wa.me/94710564090'
     },
@@ -70,9 +77,9 @@ export default function Footer() {
                         </h1>
                         <div className="h-0.5 bg-yellow-300 w-1/3 self-center"></div>
                     </div>
-                    <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-2 mb-10">
+                    <ul className="grid gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-2 mb-10">
                         {contacts.map((contact) => (
-                            <li key={contact.name}>
+                            <li key={contact.id}>
                                 <div className="flex items-center justify-center gap-x-6">
                                     <img className="h-16 w-16 rounded-full" src={contact.imageUrl} alt="" />
                                     <div>
@@ -86,7 +93,7 @@ export default function Footer() {
                         <div className="h-0.5 bg-yellow-300 w-1/3 self-center"></div>
                         <div className="mx-auto flex space-x-2 w-1/3 justify-center">
                             {socials.map((social) => (
-                                <li key={social.name}>
+                                <li key={social.id}>
                                     <div className="flex items-center justify-center gap-x-6 self-center">
                                         <a href={social.href}>
                                             <img className="sm:h-16 sm:w-16 mx:h-6 mx:w-6 rounded-full" src={social.imageUrl} alt="" />
