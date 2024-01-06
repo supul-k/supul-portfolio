@@ -22,10 +22,10 @@ export default function HeroComponent() {
                         I'm a passionate software developer with experience in various programming languages and frameworks. I specialize in creating efficient, scalable, and manageable software solutions. I have a strong understanding of software development principles and a knack for solving complex problems.                        </p>
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <a
-                            href="/myskills"
+                            href="/projects"
                             className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                         >
-                            My Skills
+                            Projects
                         </a>
                         <a href="https://github.com/supul-k" className="text-sm font-semibold leading-6 text-white">
                             GitHub <span aria-hidden="true">→</span>

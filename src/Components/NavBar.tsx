@@ -1,6 +1,7 @@
 import React , {useState} from 'react';
 import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Disclosure, Menu} from '@headlessui/react'
+// import {  Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useNavigate } from 'react-router-dom';
 import logo from '../images/1-removebg-preview.png'
@@ -106,7 +107,7 @@ export default function NavBar() {
                                             />
                                         </Menu.Button>
                                     </div>
-                                    <Transition
+                                    {/* <Transition
                                         as={Fragment}
                                         enter="transition ease-out duration-100"
                                         enterFrom="transform opacity-0 scale-95"
@@ -147,7 +148,7 @@ export default function NavBar() {
                                                 )}
                                             </Menu.Item>
                                         </Menu.Items>
-                                    </Transition>
+                                    </Transition> */}
                                 </Menu>
                             </div>
                         </div>
