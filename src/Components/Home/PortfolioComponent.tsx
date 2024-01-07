@@ -1,7 +1,7 @@
-import backgroundImage from '../../images/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg'
-import sldha from '../../images/projects/sldha.png'
-import culling from '../../images/projects/culling.png'
-import portfollio from '../../images/projects/portfolio.png'
+import backgroundImage from '../../images/fotis-fotopoulos-DuHKoV44prg-unsplash.webp'
+import sldha from '../../images/projects/sldha.webp'
+import culling from '../../images/projects/culling.webp'
+import portfollio from '../../images/projects/portfolio.webp'
 
 const projects = [
     {
