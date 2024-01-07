@@ -1,12 +1,12 @@
-import profileImage from '../images/WhatsApp Image 2022-12-16 at 2.29.57 AM.jpg'
-import logo from '../images/1-removebg-preview.png'
-import gmail from '../images/contact/gmail.png'
-import phone from '../images/contact/phone-call.png'
-import map from '../images/contact/map.png'
-import facebook from '../images/contact/facebook.png'
-import linkedin from '../images/contact/linkedin.png'
-import instagram from '../images/contact/instagram.png'
-import whatsapp from '../images/contact/whatsapp.png'
+import profileImage from '../images/WhatsApp Image 2022-12-16 at 2.29.57 AM.webp'
+import logo from '../images/1-removebg-preview.webp'
+import gmail from '../images/contact/gmail.webp'
+import phone from '../images/contact/phone-call.webp'
+import map from '../images/contact/map.webp'
+import facebook from '../images/contact/facebook.webp'
+import linkedin from '../images/contact/linkedin.webp'
+import instagram from '../images/contact/instagram.webp'
+import whatsapp from '../images/contact/whatsapp.webp'
 
 const contacts = [
     {

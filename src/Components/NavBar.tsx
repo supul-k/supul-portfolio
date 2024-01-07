@@ -4,8 +4,8 @@ import { Disclosure, Menu} from '@headlessui/react'
 // import {  Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useNavigate } from 'react-router-dom';
-import logo from '../images/1-removebg-preview.png'
-import profileImage from '../images/WhatsApp Image 2022-12-16 at 2.29.57 AM.jpg'
+import logo from '../images/1-removebg-preview.webp'
+import profileImage from '../images/WhatsApp Image 2022-12-16 at 2.29.57 AM.webp'
 
 const navigation = [
     { name: 'Dashboard', href: '/', current: true },

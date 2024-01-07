@@ -1,10 +1,10 @@
 import { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import sldha from '../../images/projects/sldha.png'
-import culling from '../../images/projects/culling.png'
-import portfollio from '../../images/projects/portfolio.png'
-import mail from '../../images/projects/email_filter.jpg'
-import profileImage from '../../images/WhatsApp Image 2022-12-16 at 2.29.57 AM.jpg'
+import sldha from '../../images/projects/sldha.webp'
+import culling from '../../images/projects/culling.webp'
+import portfollio from '../../images/projects/portfolio.webp'
+import mail from '../../images/projects/email_filter.webp'
+import profileImage from '../../images/WhatsApp Image 2022-12-16 at 2.29.57 AM.webp'
 
 const posts = [
     {
