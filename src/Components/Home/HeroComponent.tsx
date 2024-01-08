@@ -13,7 +13,7 @@ export default function HeroComponent() {
                 </div>
                 <div className="text-center">
                     <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                        SUPUL KALHARA
+                        Hi 👋, I'm SUPUL KALHARA
                     </h1>
                     <p className="text-2xl font-semibold text-white sm:text-3xl">
                         <span>A passionate fullstack developer in Sri Lanka</span>
