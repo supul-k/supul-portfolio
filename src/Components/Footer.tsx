@@ -128,7 +128,7 @@ export default function Footer() {
                                 <circle cx={1} cy={1} r={1} />
                             </svg>
                             <div className="text-white"><p>
-                                © {new Date().getFullYear()} Your Name. All rights reserved.
+                                © {new Date().getFullYear()} Supul Kalhara. All rights reserved.
                             </p></div>
                         </div>
                     </figcaption>
