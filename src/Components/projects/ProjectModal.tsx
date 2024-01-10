@@ -16,7 +16,11 @@ const posts = [
             'This is a web platform allowing users to explore and filter health facilities and digital health systems on a map, with features like user registration, profile management, and detailed information on counts and names of facilities in specific areas.',
         date: 'Jun , 2023',
         datetime: '2020-03-16',
-        category: { title: 'goverment'},
+        category: [
+            { title: 'Laravel' },
+            { title: 'MySQL' },
+            { title: 'ArcGIS' },
+        ],
         author: {
             name: 'Supul Kalhara',
             role: 'Software Engineer',
@@ -33,7 +37,11 @@ const posts = [
             'The Culling Software employs machine learning to assess and score multiple images for quality and relevance, enabling efficient filtering and sorting. With robust security measures, it ensures user privacy and data protection during the image selection process',
         date: 'Oct , 2023',
         datetime: '2020-03-16',
-        category: { title: 'Marketing'},
+        category: [
+            { title: 'Laravel' },
+            { title: 'MySQL' },
+            { title: 'Python' },
+        ],
         author: {
             name: 'Supul Kalhara',
             role: 'Software Engineer',
@@ -50,7 +58,9 @@ const posts = [
             'This is a comprehensive web platform that I have meticulously designed and developed to showcase my diverse set of skills and the multitude of projects that I have successfully completed. It serves as a digital portfolio, providing a detailed insight into my capabilities as a developer. The projects featured on this platform span various domains and technologies, reflecting my versatility and commitment to delivering high-quality solutions. Each project is accompanied by a thorough description, highlighting the problem it solves, the technologies used, and the methodologies followed during development. This platform is not just a testament to my past work, but it also represents my passion for continuous learning and my readiness to take on future challenges.',
         date: 'Jan , 2024',
         datetime: '2020-03-16',
-        category: { title: 'Marketing'},
+        category: [
+            { title: 'ReactTS' },
+        ],
         author: {
             name: 'Supul Kalhara',
             role: 'Software Engineer',
@@ -67,7 +77,10 @@ const posts = [
             "Explore our cutting-edge website crafted with Django and JavaScript, seamlessly blending robust backend functionality with dynamic frontend interactions. Enjoy a modern, sleek interface designed for intuitive navigation and responsiveness. Experience real-time updates, smooth transitions, and engaging user interactions, thanks to the powerful combination of Django's efficiency and JavaScript's interactivity. Whether you're a casual visitor or a registered user, our website delivers a secure, feature-rich experience that redefines online interaction. Join us on a digital journey where innovation meets reliability, enhancing your online experience with the perfect synergy of Django and JavaScript.",
         date: 'Jan , 2024',
         datetime: '2020-03-16',
-        category: { title: 'Email'},
+        category: [
+            { title: 'Django' },
+            { title: 'JavaScript' },
+        ],
         author: {
             name: 'Supul Kalhara',
             role: 'Software Engineer',
@@ -130,12 +143,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ id, onClose }) => {
                                                     <time dateTime={posts[id - 1].datetime} className="text-gray-500">
                                                         {posts[id - 1].date}
                                                     </time>
-                                                    <p
-                                                        // href={post.category.href}
-                                                        className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-                                                    >
-                                                        {posts[id - 1].category.title}
-                                                    </p>
+                                                    {posts[id-1].category.map((cat) => (
+                                                        <p
+                                                            // href={post.category.href}
+                                                            className="relative z-10 rounded-full bg-gray-600 px-3 py-1.5 font-medium text-white hover:bg-gray-800"
+                                                        >
+                                                            <span key={cat.title}>{cat.title}</span>
+                                                        </p>
+                                                    ))}
                                                 </div>
                                                 <div className="group relative">
                                                     <h3 className="mt-3 px-4 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
@@ -162,7 +177,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ id, onClose }) => {
                                         )}
                                     </div>
                                 </div>
-                                <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">                                    
+                                <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                                     <button
                                         type="button"
                                         className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
