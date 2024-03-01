@@ -1,9 +1,26 @@
-const links = [
-    { name: 'GitHub', href: 'https://github.com/supul-k' },
-]
 const experiences = [
-    { name: 'ICTA', description: 'Information Communication Technology Agency of Sri Lanka', time: '2023 January' },
-    { name: 'HasthiyaIT', description: 'HasthiyaIT', time: '2023 July' },
+    { 
+        id: 1,
+        name: 'DEONX', 
+        description: 'DEONX', 
+        time: '2024 Feb', 
+        position: 'Associate Software Engineer' 
+    },
+    {
+        id: 2,
+        name: 'HasthiyaIT',
+        description: 'HasthiyaIT',
+        time: '2023 July',
+        position: 'Associate Software Engineer'
+    },   
+    { 
+        id: 3,
+        name: 'ICTA', 
+        description: 'ICTA', 
+        time: '2023 January', 
+        position: 'Software Engineer - Intern' 
+    }
+
 ]
 
 export default function ExperienceComponent() {
@@ -46,16 +63,16 @@ export default function ExperienceComponent() {
                 <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
                     <div className="relative mx-auto flex flex-col space-y-4 px-3 py-1 text-sm leading-6 text-white" style={{ maxWidth: 'fit-content' }}>
                         {experiences.map((experience) => (
-                            <div className="flex relative ">
+                            <div key={experience.id} className="flex relative">
                                 <div className="absolute w-0.5 bg-yellow-300 h-full top-0 left-1.5 mt-4"></div>
                                 <div className="flex items">
                                     <div className="relative z-10 w-4 h-4 bg-yellow-300 rounded-full mb-2"></div>
-                                    <span className="ml-2 text-yellow-300" style={{width:'100px'}}><b>{experience.time}</b></span>
+                                    <span className="ml-2 text-yellow-300" style={{ width: '100px' }}><b>{experience.time}</b></span>
                                 </div>
-                                {/* <div className="relative z-10 w-4 h-4 bg-yellow-300 rounded-full mb-2"></div> */}
                                 <div className="px-3 py-1 text-sm leading-6 text-white" style={{ maxWidth: 'fit-content' }}>
                                     <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">{experience.name}</h2>
-                                    <p className="mt-6 text-lg leading-8 text-gray-300">{experience.description}</p>
+                                    <p className="mt-1 text-lg leading-8 text-gray-300">{experience.position}</p>
+                                    <p className="mt-4 text-lg leading-8 text-gray-300">{experience.description}</p>
                                 </div>
                             </div>
                         ))}

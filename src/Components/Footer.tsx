@@ -1,30 +1,8 @@
 import profileImage from '../images/WhatsApp Image 2022-12-16 at 2.29.57 AM.webp'
-import logo from '../images/1-removebg-preview.webp'
-import gmail from '../images/contact/gmail.webp'
-import phone from '../images/contact/phone-call.webp'
-import map from '../images/contact/map.webp'
 import facebook from '../images/contact/facebook.webp'
 import linkedin from '../images/contact/linkedin.webp'
 import instagram from '../images/contact/instagram.webp'
 import whatsapp from '../images/contact/whatsapp.webp'
-
-const contacts = [
-    {
-        id: 1,
-        name: 'supulkalhara7@gmail.com',
-        imageUrl: gmail
-    },
-    {
-        id: 2,
-        name: '(+94) 71 056 4090 (WhatsApp)',
-        imageUrl: phone
-    },
-    {
-        id: 3,
-        name: 'Colombo, Sri Lanka',
-        imageUrl: map
-    },
-]
 
 const socials = [
     {
@@ -55,7 +33,7 @@ const socials = [
 
 export default function Footer() {
     return (
-        <section className="relative isolate overflow-hidden bg-black px-6 py-24 sm:py-20 lg:px-8">
+        <section className="relative isolate overflow-hidden bg-black px-6 lg:px-8">
             <div
                 className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
                 aria-hidden="true"
@@ -69,50 +47,28 @@ export default function Footer() {
                 />
             </div>
             <div className="mx-auto">
-                <div className=''>
-                    <div className='flex justify-center items-center py-10 mb-10'>
-                        <div className="h-0.5 bg-yellow-300 w-1/3 self-center"></div>
-                        <h1 className="text-center text-3xl w-1/3 font-extrabold text-white sm:text-4xl sm:tracking-tight lg:text-5xl mx-4">
-                            Contact Me
-                        </h1>
-                        <div className="h-0.5 bg-yellow-300 w-1/3 self-center"></div>
-                    </div>
-                    <ul className="grid gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-2 mb-10">
-                        {contacts.map((contact) => (
-                            <li key={contact.id}>
-                                <div className="flex items-center justify-center gap-x-6">
-                                    <img className="h-16 w-16 rounded-full" src={contact.imageUrl} alt="" />
-                                    <div>
-                                        <h3 className="text-base font-semibold leading-7 tracking-tight text-white">{contact.name}</h3>
-                                    </div>
+                <div className='flex justify-center items-center py-10 mb-10'>
+                    <div className="h-0.5 bg-yellow-300 w-1/3 self-center"></div>
+                    <div className="mx-auto flex space-x-2 w-1/3 justify-center">
+                        {socials.map((social) => (
+                            <li key={social.id}>
+                                <div className="flex items-center justify-center gap-x-6 self-center">
+                                    <a href={social.href}>
+                                        <img className="sm:h-16 sm:w-16 mx:h-6 mx:w-6 rounded-full" src={social.imageUrl} alt="" />
+                                    </a>
                                 </div>
                             </li>
                         ))}
-                    </ul>
-                    <div className='flex justify-center items-center py-10 mb-10'>
-                        <div className="h-0.5 bg-yellow-300 w-1/3 self-center"></div>
-                        <div className="mx-auto flex space-x-2 w-1/3 justify-center">
-                            {socials.map((social) => (
-                                <li key={social.id}>
-                                    <div className="flex items-center justify-center gap-x-6 self-center">
-                                        <a href={social.href}>
-                                            <img className="sm:h-16 sm:w-16 mx:h-6 mx:w-6 rounded-full" src={social.imageUrl} alt="" />
-                                        </a>
-                                    </div>
-                                </li>
-                            ))}
-                        </div>
-                        <div className="h-0.5 bg-yellow-300 w-1/3 self-center"></div>
                     </div>
+                    <div className="h-0.5 bg-yellow-300 w-1/3 self-center"></div>
                 </div>
                 <p className="mt-4 text-center text-xl text-gray-400">
                     I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
                 </p>
-                <img className="mx-auto h-30" src={logo} alt="" />
-                <figure className="mt-10">
+                <figure className="mt-10 mb-2">
                     <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
                         <p className="mb-2 text-white">
-                            Developed with ❤️ by Supul Kalhara
+                            Developed by Supul Kalhara
                         </p>
                     </blockquote>
                     <figcaption className="mt-10">
