@@ -3,7 +3,7 @@ const links = [
 ]
 const stats = [
     { name: 'Repositories', value: '30+' },
-    { name: 'Contributions', value: '700+' },
+    { name: 'Contributions', value: '800+' },
     { name: 'Languages & Tools', value: '25+' },
     { name: 'Web Development', value: 'Unlimited' },
 ]

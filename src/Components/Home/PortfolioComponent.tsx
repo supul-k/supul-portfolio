@@ -17,11 +17,21 @@ const posts = [
         date: 'Jun , 2023',
         datetime: '2020-03-16',
         category: [
-            { title: 'Laravel' },
-            { title: 'MySQL' },
-            { title: 'ArcGIS' },
+            { 
+                id: 1,
+                title: 'Laravel' 
+            },
+            {
+                id: 2,
+                title: 'MySQL' 
+            },
+            { 
+                id: 3,
+                title: 'ArcGIS' 
+            },
         ],
         author: {
+            id: 1,
             name: 'Supul Kalhara',
             role: 'Software Engineer',
             href: '#',
@@ -38,11 +48,21 @@ const posts = [
         date: 'Oct , 2023',
         datetime: '2020-03-16',
         category: [
-            { title: 'Laravel' },
-            { title: 'MySQL' },
-            { title: 'Python' },
+            { 
+                id: 1,
+                title: 'Laravel' 
+            },
+            { 
+                id: 2,
+                title: 'MySQL' 
+            },
+            { 
+                id: 3,
+                title: 'Python' 
+            },
         ],
         author: {
+            id: 1,
             name: 'Supul Kalhara',
             role: 'Software Engineer',
             href: '#',
@@ -59,9 +79,13 @@ const posts = [
         date: 'Jan , 2024',
         datetime: '2020-03-16',
         category: [
-            { title: 'ReactTS' },
+            { 
+                id: 1,
+                title: 'ReactTS' 
+            },
         ],
         author: {
+            id: 1,
             name: 'Supul Kalhara',
             role: 'Software Engineer',
             href: '#',
@@ -75,8 +99,6 @@ export default function PortfolioComponent() {
     const [selectedId, setSelectedId] = useState<number | null>(null);
 
     const handleClick = (id: Number) => {
-        // Here you can do something with the id
-        // For example, you can save it to the state
         setSelectedId(id as number);
         setIsOpen(true);
     };
@@ -85,7 +107,6 @@ export default function PortfolioComponent() {
         <div className="relative isolate overflow-hidden bg-gray-900 py-20 sm:py-20 rounded-lg mb-20">
             <img
                 src={backgroundImage}
-                // src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
                 alt=""
                 className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
                 style={{ opacity: 0.2 }}
@@ -117,13 +138,11 @@ export default function PortfolioComponent() {
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl text-center mb-10">
                 Projects
             </h1>
-            <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-2 m-4">
-                {posts.map((post) => (
-                    <article key={post.id} className="flex max-w-sm flex-col items-start justify-between cursor-pointer sm:ml-20" onClick={() => handleClick(post.id)}>
+            <ul className="grid gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-2 m-4">
+                {posts.map((post, index) => (
+                    <article key={index} className="flex max-w-sm flex-col items-start justify-between cursor-pointer sm:ml-20" onClick={() => handleClick(post.id)}>
                         <div className="h-60 w-full bg-gray-50 overflow-hidden mb-3" style={{ borderRadius: '10px' }}>
-                            {/* <a href="#"> */}
                             <img src={post.titleImage} className="h-60 w-full " alt="" />
-                            {/* </a> */}
                         </div>
                         <div className="flex items-center gap-x-4 text-xs">
                             <time dateTime={post.datetime} className="text-white">
@@ -132,7 +151,7 @@ export default function PortfolioComponent() {
 
                             {post.category.map((cat) => (
                                 <p
-                                    // href={post.category.href}
+                                    key={cat.id}
                                     className="relative z-10 rounded-full bg-gray-600 px-3 py-1.5 font-medium text-white hover:bg-gray-800"
                                 >
                                     <span key={cat.title}>{cat.title}</span>
@@ -142,10 +161,8 @@ export default function PortfolioComponent() {
                         </div>
                         <div className="group relative">
                             <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-gray-600">
-                                {/* <a href={post.href}> */}
                                 <span className="absolute inset-0" />
                                 {post.title}
-                                {/* </a> */}
                             </h3>
                             <p className="mt-5 line-clamp-3 text-sm leading-6 text-white">{post.description}</p>
                         </div>
@@ -153,10 +170,8 @@ export default function PortfolioComponent() {
                             <img src={post.author.imageUrl} alt="" className="h-10 w-10 rounded-full bg-gray-50" />
                             <div className="text-sm leading-6">
                                 <p className="font-semibold text-white">
-                                    {/* <a href={post.author.href}> */}
                                     <span className="absolute inset-0" />
                                     {post.author.name}
-                                    {/* </a> */}
                                 </p>
                                 <p className="text-gray-500">{post.author.role}</p>
                             </div>
