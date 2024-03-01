@@ -4,7 +4,7 @@ export default function HeroComponent() {
     const [displayText, setDisplayText] = useState('');
 
     const useTypewriter = (speed = 50, text:String) => {
-        // useEffect(() => {
+        useEffect(() => {
             let i = 0;
             const typingInterval = setInterval(() => {
                 if (i < text.length) {
@@ -18,20 +18,15 @@ export default function HeroComponent() {
             return () => {
                 clearInterval(typingInterval);
             };
+        }, []);
+
+        return displayText;
     };
 
-    const TypeWriter = () => {
-        useTypewriter(50, 'sSUPUL KALHARA');
-    }
-
-    const TypeWriterLeave = () => {
-        setTimeout(() => {
-            setDisplayText('');
-        }, 1000);
-    }
+    useTypewriter(50, 'S UPUL KALHARA');
 
     return (
-        <div onMouseEnter={TypeWriter} onMouseLeave={TypeWriterLeave}>
+        <div>
             <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-20">
                 <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                     <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-white ring-1 ring-gray-100/10 hover:ring-gray-100/20">
