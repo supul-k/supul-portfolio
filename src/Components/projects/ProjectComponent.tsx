@@ -10,7 +10,7 @@ const posts = [
     {
         id: 1,
         title: 'Sri Lanka Digital Health Atlas',
-        titleImage: sldha,
+        titleImage: SLDHA,
         href: '#',
         description:
             'This is a web platform allowing users to explore and filter health facilities and digital health systems on a map, with features like user registration, profile management, and detailed information on counts and names of facilities in specific areas.',
