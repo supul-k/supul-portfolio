@@ -10,7 +10,7 @@ const posts = [
     {
         id: 1,
         title: 'Sri Lanka Digital Health Atlas',
-        titleImage: SLDHA,
+        titleImage: sldha,
         href: '#',
         description:
             'This is a web platform allowing users to explore and filter health facilities and digital health systems on a map, with features like user registration, profile management, and detailed information on counts and names of facilities in specific areas.',
@@ -34,7 +34,7 @@ const posts = [
         titleImage: culling,
         href: '#',
         description:
-            'The Culling Software employs machine learning to assess and score multiple images for quality and relevance, enabling efficient filtering and sorting. With robust security measures, it ensures user privacy and data protection during the image selection process',
+            'The Culling Software employs machine learning to assess and scores multiple images for quality and relevance, enabling efficient filtering and sorting. With robust security measures, it ensures user privacy and data protection during the image selection process',
         date: 'Oct , 2023',
         datetime: '2020-03-16',
         category: [
