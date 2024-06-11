@@ -3,6 +3,7 @@ import ProjectModal from '../projects/ProjectModal'
 import backgroundImage from '../../images/fotis-fotopoulos-DuHKoV44prg-unsplash.webp'
 import sldha from '../../images/projects/sldha.webp'
 import culling from '../../images/projects/culling.webp'
+import gisfusion from '../../images/projects/gisfusion.webp'
 import portfollio from '../../images/projects/portfolio.webp'
 import profileImage from '../../images/WhatsApp Image 2022-12-16 at 2.29.57 AM.webp'
 
@@ -71,27 +72,25 @@ const posts = [
     },
     {
         id: 3,
-        title: 'Personal Portfolio',
-        titleImage: portfollio,
+        title: 'GIS as a Service',
+        titleImage: gisfusion,
         href: '#',
         description:
             'This is a comprehensive web platform that I have meticulously designed and developed to showcase my diverse set of skills and the multitude of projects that I have successfully completed. It serves as a digital portfolio, providing a detailed insight into my capabilities as a developer. The projects featured on this platform span various domains and technologies, reflecting my versatility and commitment to delivering high-quality solutions. Each project is accompanied by a thorough description, highlighting the problem it solves, the technologies used, and the methodologies followed during development. This platform is not just a testament to my past work, but it also represents my passion for continuous learning and my readiness to take on future challenges.',
         date: 'Jan , 2024',
         datetime: '2020-03-16',
         category: [
-            { 
-                id: 1,
-                title: 'ReactTS' 
-            },
+            { id: 1, title: 'ReactTS' },
+            { id: 2, title: 'NodeJS' },
+            { id: 3, title: 'PostgreSQL' },
         ],
         author: {
-            id: 1,
             name: 'Supul Kalhara',
             role: 'Software Engineer',
             href: '#',
             imageUrl: profileImage,
         },
-    }
+    },
 ]
 export default function PortfolioComponent() {
 
